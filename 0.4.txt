@@ -1,0 +1,11 @@
+
+sequenceDiagram
+    participant BROWSER
+    participant SERVER
+    BROWSER->> SERVER: TEXT ENTERED AND SUBMITTED(METHOD POST)
+SERVER->>SERVER: Submitted note added to notes list from request body(NOT SAVED TO DB)
+SERVER-->>BROWSER: RELOAD PAGE (REQUEST 302)
+BROWSER->>BROWSER: NOTES.html called
+BROWSER->>BROWSER: NOTES.html calls STYLE.css
+BROWSER->>BROWSER: NOTES>HTML calls JAVASCRIPT file
+BROWSER->>BROWSER:JAVASCRIPT file calls JSON file from which notes are taken and displayed   
